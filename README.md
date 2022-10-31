@@ -8,6 +8,6 @@ Description: This application is used to save important notes. The user clicks o
 ![](public/assets/Images/Screen%20Shot%202022-10-30%20at%2011.38.10%20PM.png) 
 
 # Links
-Github:https://github.com/rangelf09/Business-Express-Notes
+[Github Page](https://github.com/rangelf09/Business-Express-Notes)
 
-Heroku: 
+[Heroku] ()
