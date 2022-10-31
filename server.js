@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const { application } = require('express');
 
 
 const PORT = process.env.PORT || 3001;
@@ -16,7 +15,7 @@ const db = JSON.parse(data);
 app.use(express.json());
 app.use(express.static('public'));
 
-const newJSON = (topic,response ) => {
+const newJSON = (topic, response ) => {
     let dbArray = db;
     let output = {}; 
     output.id = Date.now();
@@ -39,11 +38,11 @@ app.get('/notes', (req, res) =>
 
 app.get('/api/notes', (req, res) => res.json(db));
 
-app.get('api/notes', (req, res) => newJSON(req.body, res));
+app.post('/api/notes', (req, res) => newJSON(req.body, res));
 
 
 app.listen(PORT, () => 
-    console.log(`App listening on PORT ${PORT} `)
+    console.log(`App listening on localhost:${PORT}`)
 );
 
 console.log(db);
